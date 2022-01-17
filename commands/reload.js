@@ -5,7 +5,7 @@ module.exports = {
     const commandName = args[0];
     // Check if the command exists and is valid
     if (!client.commands.has(commandName)) {
-      return message.reply("That command does not exist");
+      return message.reply({ content:"That command does not exist",  allowedMentions: { repliedUser: false } });
     }
     // the path is relative to the *current folder*, so just ./filename.js
     delete require.cache[require.resolve(`./${commandName}.js`)];

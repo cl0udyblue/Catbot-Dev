@@ -12,7 +12,7 @@
   "dependencies": {
     "@iamtraction/google-translate": "^1.1.2",
     "anime-images-api": "^2.0.0",
-    "discord.js": "^13.3.1",
+    "discord.js": "^13.6.0",
     "got": "^11.8.3",
     "gyp": "^0.3.0",
     "install": "^0.13.0",

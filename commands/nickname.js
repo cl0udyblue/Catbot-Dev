@@ -19,12 +19,9 @@ module.exports = {
         mentionMember.setNickname(newNickname);
       } catch (error) {
         console.error(err);
-        message.reply(
-          "I cannot change that user's nickname, please put my role above the user in question's role!"
-        );
+        message.reply({ content: "I cannot change that user's nickname, please put my role above the user in question's role!",  allowedMentions: { repliedUser: false } }        );
       }
-      message.channel.send(
-        `Changed ${mentionMember}'s nickname to ${newNickname}`
-      );
+      message.reply({ content:`Changed ${mentionMember}'s nickname to ${newNickname}`,  allowedMentions: { repliedUser: false } 
+    });
     },
   };
