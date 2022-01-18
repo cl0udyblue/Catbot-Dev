@@ -1,7 +1,7 @@
 const { MessageEmbed } = require('discord.js');
 module.exports = {
     name: 'pfp',
-    aliases: ['profilepic', 'avatar', 'image'],
+    aliases: ['profilepic', 'avatar', 'av'],
     async run (client, message, args) {
       let user = message.mentions.users.first() || await client.users.fetch(args[0]).catch(() => null) || message.author 
       const embed = new MessageEmbed()
