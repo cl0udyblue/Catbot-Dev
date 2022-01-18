@@ -12,7 +12,7 @@ module.exports = {
         const dmbed = new MessageEmbed()
         .setColor('RANDOM')
         .addFields([
-            { name: 'Commands', value: `[Link](https://catbot.tech/commands)`, inline: true},
+            { name: 'Commands', value: `[Link](https://froggie.cc#commands)`, inline: true},
             { name: 'Invite me', value: `[Link](https://discord.com/api/oauth2/authorize?client_id=917288138156683285&permissions=1402776972391&scope=bot)`, inline: true },
             { name: 'Join my support server', value: `[Link](https://discord.gg/4s7vkhKtjk)`, inline: true }
           ])
