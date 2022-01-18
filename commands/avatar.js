@@ -15,6 +15,6 @@ module.exports = {
         { name: 'JPG', value: `[Link](${user.displayAvatarURL({ size: 4096, dynamic: true, format: 'jpg' })})`, inline: true },
         { name: 'WEBP', value: `[Link](${user.displayAvatarURL({ size: 4096, dynamic: true, format: 'webp' })})`, inline: true }
       ])
-        message.channel.send({ embeds: [embed] })
+        message.reply({ embeds: [embed], allowedMentions: { repliedUser: false } })
     }
 }

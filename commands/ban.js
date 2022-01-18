@@ -13,6 +13,6 @@ module.exports = {
 
   const banMember = message.mentions.members.first();
     message.guild.bans.create(banMember)
-    message.reply({ content:`${banMember.user.username} was successfully banned.`,  allowedMentions: { repliedUser: false }});
+    message.reply({ content:`${banMember.user.username} was successfully banned.`, allowedMentions: { repliedUser: false }});
   },
 }
