@@ -136,3 +136,4 @@ dist
 
 config.json
 node_modules
+commands/eval.js
