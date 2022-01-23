@@ -8,8 +8,6 @@ const config = require("./config.json");
 client.config = config;
 client.commands = new Discord.Collection();
 
-console.log(client.users.cache.find(u => u.tag === 'speedrun#0569'))
-
 const events = fs.readdirSync("./events").filter(file => file.endsWith(".js"));
 for (const file of events) {
   const eventName = file.split(".")[0];
