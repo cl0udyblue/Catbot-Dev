@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@iamtraction/google-translate": "^1.1.2",
+    "animal-api": "^0.0.2",
     "anime-images-api": "^2.0.0",
     "discord.js": "^13.6.0",
     "got": "^11.8.3",
@@ -21,10 +22,10 @@
     "node": "^17.2.0",
     "node-gyp": "^8.4.1",
     "npm": "^8.3.0",
-    "some-random-cat": "^2.4.0",
+    "some-random-cat": "^2.2.3",
     "undici": "^4.12.1",
     "youtube-search": "^1.1.6",
-    "yt-search": "^0.1.4"
+    "yt-search": "^2.10.3"
   },
   "nodeVersion": "17.1.0"
 }
