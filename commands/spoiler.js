@@ -4,7 +4,7 @@ module.exports = {
     aliases: ['spoil', 'censor', 'cw'],
     async run(client, message, args) {
         try {
-            if(client.guilds.cache.get(message.guild.id).me.permissions.has != 'MANAGE_MESSAGES', 'MANAGE_WEBHOOKS') return message.reply({ content:(`I don't have the \`MANAGE_MESSAGES\` and \`MANAGE_WEBHOOKS\` permissions!`), allowedMentions: { repliedUser: false } });
+            if(!message.guild.me.permissions.has(['MANAGE_MESSAGES', 'MANAGE_WEBHOOKS'])) return message.reply({ content:(`I don't have the \`MANAGE_MESSAGES\` and \`MANAGE_WEBHOOKS\` permissions!`), allowedMentions: { repliedUser: false } });
             const user = message.author
             if (!message.attachments.size)
                 return message.reply({
@@ -39,7 +39,7 @@ module.exports = {
                 await wc.delete()
             }
         } catch (err) {
-            message.channel.send('An unknown error occured! Please note that videos cannot be handled by the bot!')
+            message.channel.send('An unknown error occured! Please note that the max filesize is about 8mb!')
         }
     },
 }

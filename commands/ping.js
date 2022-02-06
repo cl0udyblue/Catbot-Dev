@@ -1,20 +1,6 @@
-const { MessageEmbed, MessageActionRow, MessageButton } = require('discord.js');
 module.exports = {
-  name: 'test',
+  name: 'ping',
   description: 'Get bot ping.',
-  async run (client, message, args) {
-    const row = new MessageActionRow()
-    .addComponents(
-      new MessageButton()
-        .setLabel('Test')
-        .setStyle('LINK')
-        .setURL('https://google.com'),
-    );
-  const embed = new MessageEmbed()
-  .setColor('#0099ff')
-  .setTitle('Test')
-  .setDescription('Bottom text');
-
-  await message.reply({ content: 'Pong!', embeds: [embed], components: [row] });
-},
-};
+   run: (client, message, args) => {
+    message.reply({ content:'Pong! <:icons_link:859388126875484180>',  allowedMentions: { repliedUser: false } })
+   }};

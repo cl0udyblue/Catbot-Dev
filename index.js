@@ -2,11 +2,12 @@ const { Client, Intents } = require("discord.js");
 const fs = require("fs");
 const Discord = require("discord.js");
 const client = new Client({
-  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS]
+  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]
 });
 const config = require("./config.json");
 client.config = config;
 client.commands = new Discord.Collection();
+
 
 const events = fs.readdirSync("./events").filter(file => file.endsWith(".js"));
 for (const file of events) {
